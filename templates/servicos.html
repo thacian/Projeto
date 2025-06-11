@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Beleza em Destaque - Maquiagem</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: #d147a3;
+      color: white;
+      padding: 1.5rem 2rem;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      font-weight: 600;
+      font-size: 2.5rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+
+    nav {
+      margin-top: 1rem;
+    }
+
+    nav a {
+      color: #ffe9f7;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #fdfafa;
+      text-decoration: underline;
+    }
+
+    main {
+      flex-grow: 1;
+      max-width: 1100px;
+      margin: 2rem auto;
+      background: white;
+      border-radius: 15px;
+      padding: 2rem 3rem;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    section h2 {
+      font-size: 2.2rem;
+      color: #d147a3;
+      border-bottom: 3px solid #fda085;
+      padding-bottom: 0.5rem;
+      margin-bottom: 2rem;
+      font-weight: 600;
+    }
+
+    .about-text {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #555;
+      max-width: 720px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .products-grid, .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+      gap: 1.8rem;
+    }
+
+    .product-card, .gallery-item {
+      background: #fff0f6;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(209, 67, 139, 0.2);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-card:hover, .gallery-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(209, 67, 139, 0.4);
+    }
+
+    .product-card img, .gallery-item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+      border-bottom: 2px solid #d147a3;
+      border-radius: 12px 12px 0 0;
+      flex-shrink: 0;
+    }
+
+    .product-info {
+      padding: 1rem 1.2rem;
+      text-align: center;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .product-info h3 {
+      font-weight: 600;
+      color: #b32382;
+      margin-bottom: 0.4rem;
+    }
+
+    .product-info p {
+      color: #777;
+      font-size: 0.9rem;
+      line-height: 1.4;
+      margin-bottom: 0.8rem;
+      flex-grow: 1;
+    }
+
+    .price {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #d147a3;
+      margin-top: auto;
+    }
+
+    footer {
+      background: #d147a3;
+      color: white;
+      text-align: center;
+      padding: 1.2rem 0;
+      font-weight: 600;
+      font-size: 1rem;
+      letter-spacing: 1.1px;
+      box-shadow: inset 0 3px 5px rgba(0,0,0,0.1);
+      margin-top: auto;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      nav a {
+        margin: 0 0.6rem;
+      }
+      main {
+        padding: 1.5rem 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Beleza em Destaque</h1>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#galeria">Galeria</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="sobre">
+      <h2>Sobre Maquiagem</h2>
+      <p class="about-text">
+        A maquiagem é uma forma poderosa de expressão pessoal, destacando sua beleza natural enquanto inspira criatividade e confiança. Descubra dicas, tendências e produtos essenciais para realçar seu estilo único em cada ocasião.
+      </p>
+    </section>
+
+    <section id="produtos">
+      <h2>Produtos Populares</h2>
+      <div class="products-grid">
+        <article class="product-card">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Base Líquida" />
+          <div class="product-info">
+            <h3>Base Líquida</h3>
+            <p>Base de alta cobertura para um acabamento uniforme e natural.</p>
+            <div class="price">R$ 89,90</div>
+          </div>
+        </article>
+        <article class="product-card">
+          <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80" alt="Paleta de Sombras" />
+          <div class="product-info">
+            <h3>Paleta de Sombras</h3>
+            <p>Cores vibrantes e pigmentação intensa para looks marcantes.</p>
+            <div class="price">R$ 129,90</div>
+          </div>
+        </article>
+        <article class="product-card">
+          <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=400&q=80" alt="Batom Matte" />
+          <div class="product-info">
+            <h3>Batom Matte</h3>
+            <p>Batom com textura aveludada e longa duração em várias cores.</p>
+            <div class="price">R$ 39,90</div>
+          </div>
+        </article>
+        <article class="product-card">
+          <img src="https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=400&q=80" alt="Delineador Líquido" />
+          <div class="product-info">
+            <h3>Delineador Líquido</h3>
+            <p>Precisão na aplicação para um traço intenso e duradouro.</p>
+            <div class="price">R$ 49,90</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="galeria">
+      <h2>Galeria de Looks</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1520614073990-dd6022d87d10?auto=format&fit=crop&w=400&q=80" alt="Look maquiagem natural" />
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=400&q=80" alt="Makeup olho esfumado" />
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80" alt="Make vibrante e colorida" />
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1542838687-e7a97704bdaf?auto=format&fit=crop&w=400&q=80" alt="Maquiagem para festa" />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2024 Beleza em Destaque. Todos os direitos reservados.
+  </footer>
+</body>
+</html>
+
